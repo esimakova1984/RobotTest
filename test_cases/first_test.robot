@@ -16,3 +16,4 @@ My First Test Case
     Navigate to the Careers page
     Find element and double click
     Click on the UP button    ${BUTTON_LOCATOR}    ${LOGO_LOCATOR}
+    close browser
