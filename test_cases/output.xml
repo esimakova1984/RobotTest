@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.11 on darwin)" generated="20230430 01:01:52.170" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.10.11 on darwin)" generated="20230430 01:06:04.488" rpa="false" schemaversion="3">
 <suite id="s1" name="First Test" source="/Users/olegnarushevich/PycharmProjects/Robotest/test_cases/first_test.robot">
-<test id="s1-t1" name="My First Test Case" line="15">
+<test id="s1-t1" name="My First Test Case" line="16">
 <kw name="Open browser and Maximize" library="resources">
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
@@ -9,46 +9,47 @@
 <arg>${URLName}</arg>
 <arg>${BrowserName}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230430 01:01:52.336" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
-<msg timestamp="20230430 01:01:52.336" level="INFO">Executing: /Users/olegnarushevich/PycharmProjects/Robotest/venv/lib/python3.10/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
-<status status="PASS" starttime="20230430 01:01:52.335" endtime="20230430 01:01:54.772"/>
+<msg timestamp="20230430 01:06:04.850" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20230430 01:06:04.851" level="INFO">Executing: /Users/olegnarushevich/PycharmProjects/Robotest/venv/lib/python3.10/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
+<status status="PASS" starttime="20230430 01:06:04.850" endtime="20230430 01:06:07.603"/>
 </kw>
-<status status="PASS" starttime="20230430 01:01:52.335" endtime="20230430 01:01:54.773"/>
+<status status="PASS" starttime="20230430 01:06:04.849" endtime="20230430 01:06:07.604"/>
 </kw>
 <kw name="Find Website TA9" library="resources">
 <arg>${Text}</arg>
+<arg>${Website}</arg>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:APjFqb</arg>
 <arg>${Text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230430 01:01:54.774" level="INFO">Typing text 'TA9' into text field 'id:APjFqb'.</msg>
-<status status="PASS" starttime="20230430 01:01:54.774" endtime="20230430 01:01:54.895"/>
+<msg timestamp="20230430 01:06:07.605" level="INFO">Typing text 'TA9' into text field 'id:APjFqb'.</msg>
+<status status="PASS" starttime="20230430 01:06:07.605" endtime="20230430 01:06:07.727"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>id:APjFqb</arg>
 <arg>RETURN</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20230430 01:01:54.896" level="INFO">Sending key(s) ('RETURN',) to id:APjFqb element.</msg>
-<msg timestamp="20230430 01:01:55.186" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20230430 01:01:55.186" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20230430 01:01:54.895" endtime="20230430 01:01:57.146"/>
+<msg timestamp="20230430 01:06:07.728" level="INFO">Sending key(s) ('RETURN',) to id:APjFqb element.</msg>
+<msg timestamp="20230430 01:06:08.022" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20230430 01:06:08.022" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20230430 01:06:07.727" endtime="20230430 01:06:09.620"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//*[@id="rso"]/div[1]/div/div/div/div/div/div/div[1]/a/h3</arg>
+<arg>${Website}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230430 01:01:57.147" level="INFO">Clicking element '//*[@id="rso"]/div[1]/div/div/div/div/div/div/div[1]/a/h3'.</msg>
-<status status="PASS" starttime="20230430 01:01:57.146" endtime="20230430 01:01:57.878"/>
+<msg timestamp="20230430 01:06:09.621" level="INFO">Clicking element '//*[@id="rso"]/div[1]/div/div/div/div/div/div/div[1]/a/h3'.</msg>
+<status status="PASS" starttime="20230430 01:06:09.620" endtime="20230430 01:06:11.667"/>
 </kw>
-<status status="PASS" starttime="20230430 01:01:54.773" endtime="20230430 01:01:57.879"/>
+<status status="PASS" starttime="20230430 01:06:07.604" endtime="20230430 01:06:11.667"/>
 </kw>
 <kw name="Navigate to the Careers page" library="resources">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id:menu-item-407</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230430 01:01:57.879" level="INFO">Clicking element 'id:menu-item-407'.</msg>
-<status status="PASS" starttime="20230430 01:01:57.879" endtime="20230430 01:01:58.309"/>
+<msg timestamp="20230430 01:06:11.668" level="INFO">Clicking element 'id:menu-item-407'.</msg>
+<status status="PASS" starttime="20230430 01:06:11.668" endtime="20230430 01:06:12.128"/>
 </kw>
-<status status="PASS" starttime="20230430 01:01:57.879" endtime="20230430 01:01:58.309"/>
+<status status="PASS" starttime="20230430 01:06:11.668" endtime="20230430 01:06:12.129"/>
 </kw>
 <kw name="Find element and Double click" library="resources">
 <arg>${ELEMENT}</arg>
@@ -57,55 +58,55 @@
 <var>${element}</var>
 <arg>${ELEMENT}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230430 01:01:58.325" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="d943531b963b6119420c1130ed2225d1", element="12e2e376-fbca-459a-bad7-f199db1c1b07")&gt;</msg>
-<status status="PASS" starttime="20230430 01:01:58.310" endtime="20230430 01:01:58.325"/>
+<msg timestamp="20230430 01:06:12.140" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="7ea2924123fb5de8c5a010cf696bd841", element="1aa220de-e305-42cd-976e-677ff0011237")&gt;</msg>
+<status status="PASS" starttime="20230430 01:06:12.130" endtime="20230430 01:06:12.140"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${text}</var>
 <arg>All rights Reserved to TA9 LTD 2023</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20230430 01:01:58.602" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230430 01:01:58.602" level="FAIL">Element with locator 'All rights Reserved to TA9 LTD 2023' not found.</msg>
-<status status="FAIL" starttime="20230430 01:01:58.325" endtime="20230430 01:01:58.606"/>
+<msg timestamp="20230430 01:06:12.394" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230430 01:06:12.394" level="FAIL">Element with locator 'All rights Reserved to TA9 LTD 2023' not found.</msg>
+<status status="FAIL" starttime="20230430 01:06:12.140" endtime="20230430 01:06:12.402"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${word}</var>
 <arg>2023</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20230430 01:01:58.607" endtime="20230430 01:01:58.607"/>
+<status status="NOT RUN" starttime="20230430 01:06:12.402" endtime="20230430 01:06:12.402"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${word_index}</var>
 <arg>"${text}".find("${word}")</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20230430 01:01:58.607" endtime="20230430 01:01:58.607"/>
+<status status="NOT RUN" starttime="20230430 01:06:12.402" endtime="20230430 01:06:12.402"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${word_length}</var>
 <arg>${word}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="NOT RUN" starttime="20230430 01:01:58.607" endtime="20230430 01:01:58.607"/>
+<status status="NOT RUN" starttime="20230430 01:06:12.402" endtime="20230430 01:06:12.402"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>var el = arguments[0], range = document.createRange(); range.setStart(el.childNodes[0], ${word_index}); range.setEnd(el.childNodes[0], ${word_index}+${word_length}); window.getSelection().removeAllRanges(); window.getSelection().addRange(range);</arg>
 <arg>${element}</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20230430 01:01:58.607" endtime="20230430 01:01:58.607"/>
+<status status="NOT RUN" starttime="20230430 01:06:12.402" endtime="20230430 01:06:12.402"/>
 </kw>
-<status status="FAIL" starttime="20230430 01:01:58.309" endtime="20230430 01:01:58.607"/>
+<status status="FAIL" starttime="20230430 01:06:12.129" endtime="20230430 01:06:12.403"/>
 </kw>
 <kw name="Click on the UP button" library="resources">
 <arg>${BUTTON_LOCATOR}</arg>
 <arg>${LOGO_LOCATOR}</arg>
-<status status="NOT RUN" starttime="20230430 01:01:58.607" endtime="20230430 01:01:58.608"/>
+<status status="NOT RUN" starttime="20230430 01:06:12.403" endtime="20230430 01:06:12.403"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20230430 01:01:58.608" endtime="20230430 01:01:58.608"/>
+<status status="NOT RUN" starttime="20230430 01:06:12.403" endtime="20230430 01:06:12.403"/>
 </kw>
-<status status="FAIL" starttime="20230430 01:01:52.334" endtime="20230430 01:01:58.608">Element with locator 'All rights Reserved to TA9 LTD 2023' not found.</status>
+<status status="FAIL" starttime="20230430 01:06:04.848" endtime="20230430 01:06:12.403">Element with locator 'All rights Reserved to TA9 LTD 2023' not found.</status>
 </test>
-<status status="FAIL" starttime="20230430 01:01:52.172" endtime="20230430 01:01:58.609"/>
+<status status="FAIL" starttime="20230430 01:06:04.491" endtime="20230430 01:06:12.404"/>
 </suite>
 <statistics>
 <total>

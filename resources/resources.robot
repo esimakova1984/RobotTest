@@ -8,10 +8,10 @@ Open browser and Maximize
     open browser    ${URLName}    ${BrowserName}
 
 Find Website TA9
-    [Arguments]    ${Text}
+    [Arguments]    ${Text}    ${Website}
     input text    id:APjFqb    ${Text}
     press keys    id:APjFqb    RETURN
-    click element    //*[@id="rso"]/div[1]/div/div/div/div/div/div/div[1]/a/h3
+    click element    ${Website}
 
 Navigate to the Careers page
     click element    id:menu-item-407
@@ -24,9 +24,6 @@ Find element and Double click
     ${word_index}=    Evaluate    "${text}".find("${word}")
     ${word_length}=    Get Length    ${word}
     Execute JavaScript    var el = arguments[0], range = document.createRange(); range.setStart(el.childNodes[0], ${word_index}); range.setEnd(el.childNodes[0], ${word_index}+${word_length}); window.getSelection().removeAllRanges(); window.getSelection().addRange(range);    ${element}
-
-
-
 
 Click on the UP button
     [Arguments]    ${BUTTON_LOCATOR}    ${LOGO_LOCATOR}
