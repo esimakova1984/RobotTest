@@ -17,7 +17,16 @@ Navigate to the Careers page
     click element    id:menu-item-407
 
 Find element and Double click
-     double click element    xpath://*[@id="precise-wrapper"]/div[5]/div[2]/div[2]/p
+    [Arguments]    ${ELEMENT}    ${WORD}
+    ${element}=  Get WebElement  ${ELEMENT}
+    ${text}=    get text    All rights Reserved to TA9 LTD 2023
+    ${word}=    Set Variable    2023
+    ${word_index}=    Evaluate    "${text}".find("${word}")
+    ${word_length}=    Get Length    ${word}
+    Execute JavaScript    var el = arguments[0], range = document.createRange(); range.setStart(el.childNodes[0], ${word_index}); range.setEnd(el.childNodes[0], ${word_index}+${word_length}); window.getSelection().removeAllRanges(); window.getSelection().addRange(range);    ${element}
+
+
+
 
 Click on the UP button
     [Arguments]    ${BUTTON_LOCATOR}    ${LOGO_LOCATOR}

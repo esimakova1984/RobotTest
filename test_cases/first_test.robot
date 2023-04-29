@@ -8,12 +8,14 @@ ${Browser}    Chrome
 ${Text}    TA9
 ${BUTTON_LOCATOR}   id:precise_backtop
 ${LOGO_LOCATOR}  xpath://*[@class='logo precise-flex-box precise-flex-box-ai-center']
+${ELEMENT}    //*[@class='cp-right']
+${WORD}    2023
 
 *** Test Cases ***
 My First Test Case
     Open browser and Maximize    ${URL}    ${Browser}
     Find Website TA9    ${Text}
     Navigate to the Careers page
-    Find element and double click
+    Find element and double click    ${ELEMENT}    ${WORD}
     Click on the UP button    ${BUTTON_LOCATOR}    ${LOGO_LOCATOR}
     close browser
