@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.11 on darwin)" generated="20230430 01:06:04.488" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.10.11 on darwin)" generated="20230430 22:08:30.734" rpa="false" schemaversion="3">
 <suite id="s1" name="First Test" source="/Users/olegnarushevich/PycharmProjects/Robotest/test_cases/first_test.robot">
-<test id="s1-t1" name="My First Test Case" line="16">
+<test id="s1-t1" name="My First Test Case" line="18">
 <kw name="Open browser and Maximize" library="resources">
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
@@ -9,115 +9,133 @@
 <arg>${URLName}</arg>
 <arg>${BrowserName}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230430 01:06:04.850" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
-<msg timestamp="20230430 01:06:04.851" level="INFO">Executing: /Users/olegnarushevich/PycharmProjects/Robotest/venv/lib/python3.10/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
-<status status="PASS" starttime="20230430 01:06:04.850" endtime="20230430 01:06:07.603"/>
+<msg timestamp="20230430 22:08:30.888" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20230430 22:08:30.889" level="INFO">Executing: /Users/olegnarushevich/PycharmProjects/Robotest/venv/lib/python3.10/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
+<status status="PASS" starttime="20230430 22:08:30.888" endtime="20230430 22:08:33.300"/>
 </kw>
-<status status="PASS" starttime="20230430 01:06:04.849" endtime="20230430 01:06:07.604"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230430 22:08:33.301" endtime="20230430 22:08:33.770"/>
+</kw>
+<status status="PASS" starttime="20230430 22:08:30.887" endtime="20230430 22:08:33.771"/>
 </kw>
 <kw name="Find Website TA9" library="resources">
 <arg>${Text}</arg>
+<arg>${LINK_TA9}</arg>
 <arg>${Website}</arg>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id:APjFqb</arg>
+<arg>${LINK_TA9}</arg>
 <arg>${Text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230430 01:06:07.605" level="INFO">Typing text 'TA9' into text field 'id:APjFqb'.</msg>
-<status status="PASS" starttime="20230430 01:06:07.605" endtime="20230430 01:06:07.727"/>
+<msg timestamp="20230430 22:08:33.774" level="INFO">Typing text 'TA9' into text field 'id:APjFqb'.</msg>
+<status status="PASS" starttime="20230430 22:08:33.773" endtime="20230430 22:08:33.898"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
-<arg>id:APjFqb</arg>
+<arg>${LINK_TA9}</arg>
 <arg>RETURN</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20230430 01:06:07.728" level="INFO">Sending key(s) ('RETURN',) to id:APjFqb element.</msg>
-<msg timestamp="20230430 01:06:08.022" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20230430 01:06:08.022" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20230430 01:06:07.727" endtime="20230430 01:06:09.620"/>
+<msg timestamp="20230430 22:08:33.899" level="INFO">Sending key(s) ('RETURN',) to id:APjFqb element.</msg>
+<msg timestamp="20230430 22:08:34.186" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20230430 22:08:34.187" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20230430 22:08:33.899" endtime="20230430 22:08:35.943"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Website}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230430 01:06:09.621" level="INFO">Clicking element '//*[@id="rso"]/div[1]/div/div/div/div/div/div/div[1]/a/h3'.</msg>
-<status status="PASS" starttime="20230430 01:06:09.620" endtime="20230430 01:06:11.667"/>
+<msg timestamp="20230430 22:08:35.944" level="INFO">Clicking element '//*[@id="rso"]/div[1]/div/div/div/div/div/div/div[1]/a/h3'.</msg>
+<status status="PASS" starttime="20230430 22:08:35.943" endtime="20230430 22:08:37.236"/>
 </kw>
-<status status="PASS" starttime="20230430 01:06:07.604" endtime="20230430 01:06:11.667"/>
+<status status="PASS" starttime="20230430 22:08:33.771" endtime="20230430 22:08:37.236"/>
 </kw>
 <kw name="Navigate to the Careers page" library="resources">
+<arg>${CAREERS}</arg>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>id:menu-item-407</arg>
+<arg>${CAREERS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230430 01:06:11.668" level="INFO">Clicking element 'id:menu-item-407'.</msg>
-<status status="PASS" starttime="20230430 01:06:11.668" endtime="20230430 01:06:12.128"/>
+<msg timestamp="20230430 22:08:37.238" level="INFO">Clicking element 'id:menu-item-407'.</msg>
+<status status="PASS" starttime="20230430 22:08:37.237" endtime="20230430 22:08:38.121"/>
 </kw>
-<status status="PASS" starttime="20230430 01:06:11.668" endtime="20230430 01:06:12.129"/>
+<status status="PASS" starttime="20230430 22:08:37.236" endtime="20230430 22:08:38.122"/>
 </kw>
-<kw name="Find element and Double click" library="resources">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${ELEMENT}</arg>
-<arg>${WORD}</arg>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${element}</var>
-<arg>${ELEMENT}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230430 01:06:12.140" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="7ea2924123fb5de8c5a010cf696bd841", element="1aa220de-e305-42cd-976e-677ff0011237")&gt;</msg>
-<status status="PASS" starttime="20230430 01:06:12.130" endtime="20230430 01:06:12.140"/>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230430 22:08:38.122" endtime="20230430 22:08:38.414"/>
 </kw>
+<kw name="Fetch the year" library="resources">
+<arg>${ELEMENT}</arg>
+<arg>${YEAR}</arg>
 <kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>All rights Reserved to TA9 LTD 2023</arg>
+<var>${element_text}</var>
+<arg>${ELEMENT}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20230430 01:06:12.394" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230430 01:06:12.394" level="FAIL">Element with locator 'All rights Reserved to TA9 LTD 2023' not found.</msg>
-<status status="FAIL" starttime="20230430 01:06:12.140" endtime="20230430 01:06:12.402"/>
+<msg timestamp="20230430 22:08:38.441" level="INFO">${element_text} = All rights Reserved to TA9 LTD 2023</msg>
+<status status="PASS" starttime="20230430 22:08:38.415" endtime="20230430 22:08:38.441"/>
 </kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${word}</var>
-<arg>2023</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20230430 01:06:12.402" endtime="20230430 01:06:12.402"/>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${element_text}</arg>
+<arg>${YEAR}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230430 22:08:38.441" endtime="20230430 22:08:38.441"/>
 </kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${word_index}</var>
-<arg>"${text}".find("${word}")</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20230430 01:06:12.402" endtime="20230430 01:06:12.402"/>
-</kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${word_length}</var>
-<arg>${word}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="NOT RUN" starttime="20230430 01:06:12.402" endtime="20230430 01:06:12.402"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>var el = arguments[0], range = document.createRange(); range.setStart(el.childNodes[0], ${word_index}); range.setEnd(el.childNodes[0], ${word_index}+${word_length}); window.getSelection().removeAllRanges(); window.getSelection().addRange(range);</arg>
-<arg>${element}</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20230430 01:06:12.402" endtime="20230430 01:06:12.402"/>
-</kw>
-<status status="FAIL" starttime="20230430 01:06:12.129" endtime="20230430 01:06:12.403"/>
+<status status="PASS" starttime="20230430 22:08:38.415" endtime="20230430 22:08:38.441"/>
 </kw>
 <kw name="Click on the UP button" library="resources">
 <arg>${BUTTON_LOCATOR}</arg>
 <arg>${LOGO_LOCATOR}</arg>
-<status status="NOT RUN" starttime="20230430 01:06:12.403" endtime="20230430 01:06:12.403"/>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${button_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${BUTTON_LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${BUTTON_LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230430 22:08:38.648" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-31.png"&gt;&lt;img src="selenium-screenshot-31.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230430 22:08:38.648" level="FAIL">The element 'id:precise_backtop' should be visible, but it is not.</msg>
+<status status="FAIL" starttime="20230430 22:08:38.442" endtime="20230430 22:08:38.649"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20230430 01:06:12.403" endtime="20230430 01:06:12.403"/>
+<msg timestamp="20230430 22:08:38.649" level="INFO">${button_present} = False</msg>
+<status status="PASS" starttime="20230430 22:08:38.442" endtime="20230430 22:08:38.649"/>
 </kw>
-<status status="FAIL" starttime="20230430 01:06:04.848" endtime="20230430 01:06:12.403">Element with locator 'All rights Reserved to TA9 LTD 2023' not found.</status>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${button_present}</arg>
+<arg>Click Element</arg>
+<arg>${BUTTON_LOCATOR}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230430 22:08:38.650" endtime="20230430 22:08:38.650"/>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<arg>${button_present}</arg>
+<arg>Click Element</arg>
+<arg>${LOGO_LOCATOR}</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<msg timestamp="20230430 22:08:38.650" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGO_LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230430 22:08:38.651" level="INFO">Clicking element 'xpath://*[@class='logo precise-flex-box precise-flex-box-ai-center']'.</msg>
+<status status="PASS" starttime="20230430 22:08:38.651" endtime="20230430 22:08:39.094"/>
+</kw>
+<status status="PASS" starttime="20230430 22:08:38.650" endtime="20230430 22:08:39.094"/>
+</kw>
+<status status="PASS" starttime="20230430 22:08:38.442" endtime="20230430 22:08:39.094"/>
+</kw>
+<status status="PASS" starttime="20230430 22:08:30.887" endtime="20230430 22:08:39.094"/>
 </test>
-<status status="FAIL" starttime="20230430 01:06:04.491" endtime="20230430 01:06:12.404"/>
+<status status="PASS" starttime="20230430 22:08:30.736" endtime="20230430 22:08:39.095"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="First Test">First Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="First Test">First Test</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20230430 22:08:38.650" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
 </errors>
 </robot>

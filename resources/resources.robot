@@ -1,29 +1,26 @@
 *** Settings ***
 Library    SeleniumLibrary
 
-
 *** Keywords ***
 Open browser and Maximize
     [Arguments]    ${URLName}    ${BrowserName}
     open browser    ${URLName}    ${BrowserName}
+    maximize browser window
 
 Find Website TA9
-    [Arguments]    ${Text}    ${Website}
-    input text    id:APjFqb    ${Text}
-    press keys    id:APjFqb    RETURN
+    [Arguments]    ${Text}    ${LINK_TA9}    ${Website}
+    input text    ${LINK_TA9}    ${Text}
+    press keys    ${LINK_TA9}    RETURN
     click element    ${Website}
 
 Navigate to the Careers page
-    click element    id:menu-item-407
+    [Arguments]    ${CAREERS}
+    click element    ${CAREERS}
 
-Find element and Double click
-    [Arguments]    ${ELEMENT}    ${WORD}
-    ${element}=  Get WebElement  ${ELEMENT}
-    ${text}=    get text    All rights Reserved to TA9 LTD 2023
-    ${word}=    Set Variable    2023
-    ${word_index}=    Evaluate    "${text}".find("${word}")
-    ${word_length}=    Get Length    ${word}
-    Execute JavaScript    var el = arguments[0], range = document.createRange(); range.setStart(el.childNodes[0], ${word_index}); range.setEnd(el.childNodes[0], ${word_index}+${word_length}); window.getSelection().removeAllRanges(); window.getSelection().addRange(range);    ${element}
+Fetch the year
+    [Arguments]    ${ELEMENT}   ${YEAR}
+    ${element_text}=    Get Text    ${ELEMENT}
+    Should Contain    ${element_text}    ${YEAR}
 
 Click on the UP button
     [Arguments]    ${BUTTON_LOCATOR}    ${LOGO_LOCATOR}
